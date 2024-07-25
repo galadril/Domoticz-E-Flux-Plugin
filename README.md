@@ -19,7 +19,7 @@ To install:
 
 ## Devices
 
-![image](https://github.com/galadril/Domoticz-E-Flux-Plugin/assets/14561640/af425b0c-86d8-41f5-8eeb-795a2a2bb0ff)
+![image](https://github.com/user-attachments/assets/31241e24-c2a9-4f7b-b9bd-8135e7021fe3)
 
 
 ## Configuration
