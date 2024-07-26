@@ -129,7 +129,7 @@ class EFluxPlugin:
 
                     total_wh = total_kwh * 1000
                     if charger_status == 'ACTIVE':
-                        average_charging_rate = (total_kwh / (duration_seconds / 3600)) if duration_seconds > 0 else 0
+                        average_charging_rate = total_wh / (duration_seconds / 3600) if duration_seconds > 0 else 0
                     else:
                         average_charging_rate = 0
 
@@ -146,8 +146,8 @@ class EFluxPlugin:
                     self.updateDeviceValue(1, "{:.0f}".format(total_wh), 0)
                     self.updateDeviceValue(2, "{:.2f}".format(average_charging_rate), 0)
                     self.updateDeviceValue(3, charger_status, 0)
-                    self.updateDeviceValue(4, "{:.2f} €".format(total_cost), 0)  # Total Cost with Euro symbol
-                    self.updateDeviceValue(5, "{:.2f} €".format(energy_costs), 0)  # Energy Costs with Euro symbol
+                    self.updateDeviceValue(4, "{:.2f} â‚¬".format(total_cost), 0)  # Total Cost with Euro symbol
+                    self.updateDeviceValue(5, "{:.2f} â‚¬".format(energy_costs), 0)  # Energy Costs with Euro symbol
                     self.updateDeviceValue(6, "{:.2f}".format(duration_hours), 0)  # Duration in hours
                     
                     Domoticz.Log("Device update successful")
