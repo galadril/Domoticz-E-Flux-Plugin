@@ -128,7 +128,7 @@ class EFluxPlugin:
                     charger_status = latest_session.get('status', 'Unknown')
 
                     total_wh = total_kwh * 1000
-                    if charger_status == 'CHARGING':
+                    if charger_status == 'ACTIVE':
                         average_charging_rate = (total_kwh / (duration_seconds / 3600)) if duration_seconds > 0 else 0
                     else:
                         average_charging_rate = 0
