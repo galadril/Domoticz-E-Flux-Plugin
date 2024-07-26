@@ -5,7 +5,7 @@ E-Flux Plugin for Domoticz home automation
 This plugin allows you to see all the relevant information from your 'E-Flux by Road' back office of your EV Charger
 
 More info about 'E-Flux by Road' back office:
-https://dashboard.e-flux.io/
+https://www.e-flux.io/
 
 
 ## Installation
