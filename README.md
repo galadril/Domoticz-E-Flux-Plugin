@@ -19,7 +19,7 @@ To install:
 
 ## Devices
 
-![image](https://github.com/user-attachments/assets/31241e24-c2a9-4f7b-b9bd-8135e7021fe3)
+![image](https://github.com/user-attachments/assets/f481aae1-6fd4-4f7c-ab92-f4f4afd6a071)
 
 
 ## Configuration
