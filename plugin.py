@@ -133,6 +133,8 @@ class EFluxPlugin:
                     else:
                         average_charging_rate = 0
 
+                    duration_hours = duration_seconds / 3600
+                    
                     Domoticz.Log(f"Total Wh: {total_wh}")
                     Domoticz.Log(f"Total Cost: {total_cost}")
                     Domoticz.Log(f"Energy Costs: {energy_costs}")
@@ -146,8 +148,8 @@ class EFluxPlugin:
                     self.updateDeviceValue(3, charger_status, 0)
                     self.updateDeviceValue(4, "{:.2f} €".format(total_cost), 0)  # Total Cost with Euro symbol
                     self.updateDeviceValue(5, "{:.2f} €".format(energy_costs), 0)  # Energy Costs with Euro symbol
-                    self.updateDeviceValue(6, "{:.2f}".format(duration_seconds), 0)
-
+                    self.updateDeviceValue(6, "{:.2f}".format(duration_hours), 0)  # Duration in hours
+                    
                     Domoticz.Log("Device update successful")
                 else:
                     Domoticz.Log("No session data available for update")
@@ -165,7 +167,7 @@ class EFluxPlugin:
             (3, "Charger Status", "Text", 7),  # Text
             (4, "Total Cost", "Text", 7),  # Custom numerical value
             (5, "Energy Costs", "Text", 7),  # Custom numerical value
-            (6, "Duration", "Counter")  # Custom numerical value
+            (6, "Duration", "Custom", {"ValueQuantity": "Custom", "ValueUnits": "Hours"}),
         ]
         
         for unit, name, type_name, *options in device_definitions:
